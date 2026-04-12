@@ -18,10 +18,19 @@ export const AppProvider = ({ children } : { children: React.ReactNode })=> {
   const signup = (credentials: Credentials)=>{
   const {data} = await mockApi.auth.register(credentials)
   setUser(data.user);
-  if(data?.user.age && data?.user.weight && data?.user?.goal){
+  if(data?.user?.age && data?.user.weight && data?.user?.goal){
     setOnboardingCompleted(true);
   }
    localStorage.setItem('token', data.jwt);
+  }
+
+  const login = async (credentials: Credentials)=>{
+    const {data} = await mockApi.auth.login(credentials)
+    setUser({...data.user, token: data.jwt});
+    if(data?.user?.age && data?.user.weight && data?.user?.goal){
+    setOnboardingCompleted(true);
+  }
+    localStorage.setItem('token', data.jwt);
   }
   const value = {
     user,
