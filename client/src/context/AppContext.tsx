@@ -15,7 +15,7 @@ export const AppProvider = ({ children } : { children: React.ReactNode })=> {
   const [allFoodLogs, setAllFoodLogs] = useState<FoodEntry[]>([]);
   const [allActivityLogs, setAllActivityLogs] = useState<ActivityEntry[]>([]);
    
-  const signup = (credentials: Credentials)=>{
+  const signup = async(credentials: Credentials)=>{
   const {data} = await mockApi.auth.register(credentials)
   setUser(data.user);
   if(data?.user?.age && data?.user?.weight && data?.user?.goal){
