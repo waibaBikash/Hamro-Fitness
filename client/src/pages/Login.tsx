@@ -5,7 +5,7 @@ import { useState } from "react"
 
 const Login = () => {
 
-  const [state, setState] = useState('login')
+  const [state, setState] = useState('sign up')
 
   return (
     <>
@@ -24,7 +24,7 @@ const Login = () => {
                          <AtSignIcon 
                          className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 size-4.5"
                          />
-                         <input type="text" />
+                         <input type="text" placeholder="enter a username" className="login-input" required/>
                       </div>
                  </div>
                )}
