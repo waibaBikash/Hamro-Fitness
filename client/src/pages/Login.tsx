@@ -1,11 +1,28 @@
 import { AtSignIcon } from "lucide-react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { useAppContext } from "../context/AppContext"
 
 
 
 const Login = () => {
 
   const [state, setState] = useState('sign up')
+  const [username, setUsername] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [showPassword, setShowPassword] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const navigate = useNavigate()
+  const {login, signup, user}
+= useAppContext()
+
+useEffect(()=>{
+  if(user){
+    navigate('/')
+  }
+},[user, navigate])
 
   return (
     <>
@@ -24,7 +41,9 @@ const Login = () => {
                          <AtSignIcon 
                          className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 size-4.5"
                          />
-                         <input type="text" placeholder="enter a username" className="login-input" required/>
+                         <input
+                         onChange={(e) => setUsername(e.target.value)} value={username}
+                          type="text" placeholder="enter a username" className="login-input" required/>
                       </div>
                  </div>
                )}
