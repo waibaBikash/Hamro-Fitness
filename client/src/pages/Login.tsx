@@ -78,6 +78,20 @@ useEffect(()=>{
                           </button>
                       </div>
                  </div>
+
+                 <button type="submit" disabled={isSubmitting} className="login-button">
+                    {isSubmitting ? 'Signing in...' : state === 'login' ? 'Sign In' : 'Sign Up'}
+                 </button>
+
+                 {state === 'login' ? (
+                  <p>Don't hane an account?
+                     <button>Sign up</button>
+                  </p>
+                  )
+                   : ( <p>Already have an account?
+                     <button>Login</button>
+                     </p>
+                 )}
              </form>
         </main>
     </>
