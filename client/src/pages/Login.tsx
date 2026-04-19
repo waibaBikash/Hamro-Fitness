@@ -42,8 +42,10 @@ useEffect(()=>{
                          className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 size-4.5"
                          />
                          <input
-                         onChange={(e) => setUsername(e.target.value)} value={username}
-                          type="text" placeholder="enter a username" className="login-input" required/>
+                         onChange={(e) => setUsername(e.target.value)} 
+                         value={username}
+                        type="text" placeholder="enter a username"
+                         className="login-input" required/>
                       </div>
                  </div>
                )}
