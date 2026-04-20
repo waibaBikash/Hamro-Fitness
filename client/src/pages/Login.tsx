@@ -7,7 +7,7 @@ import { useAppContext } from "../context/AppContext"
 
 const Login = () => {
 
-  const [state, setState] = useState('sign up')
+  const [state, setState] = useState('login') // 'login' or 'signup'
   const [username, setUsername] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -86,11 +86,11 @@ useEffect(()=>{
                  </button>
 
                  {state === 'login' ? (
-                  <p>Don't hane an account?
+                  <p className="text-center py-6 text-sm text-gray-500 dark:text-gray-400">Don't have an account?
                      <button>Sign up</button>
                   </p>
                   )
-                   : ( <p>Already have an account?
+                   : ( <p className="text-center py-6 text-sm text-gray-500 dark:text-gray-400">Already have an account?
                      <button>Login</button>
                      </p>
                  )}
