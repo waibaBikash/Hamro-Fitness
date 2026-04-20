@@ -87,11 +87,13 @@ useEffect(()=>{
 
                  {state === 'login' ? (
                   <p className="text-center py-6 text-sm text-gray-500 dark:text-gray-400">Don't have an account?
-                     <button>Sign up</button>
+                     <button  onClick={()=> setState('sign-up')}
+                     className="ml-1 cursor-pointer text-green-600 hover:underline">Sign up</button>
                   </p>
                   )
                    : ( <p className="text-center py-6 text-sm text-gray-500 dark:text-gray-400">Already have an account?
-                     <button>Login</button>
+                     <button  onClick={()=> setState('login')}
+                     className="ml-1 cursor-pointer text-green-600 hover:underline">Login</button>
                      </p>
                  )}
              </form>
