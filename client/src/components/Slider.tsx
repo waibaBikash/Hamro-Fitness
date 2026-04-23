@@ -23,7 +23,9 @@ const Slider: React.FC<SliderProps> = ({ label, min = 0, max = 100, step = 1, va
             {label && (
                 <div className="flex justify-between items-center mb-2">
                     <div className="flex items-center gap-2">
-                        <label className="text-sm font-medium text-slate-700 dark:text-slate-300">{label}</label>
+                        <label
+                          className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                            {label}</label>
                         {infoText && (
                             <Tooltip content={infoText}>
                                 <Info className="size-4 text-slate-400 hover:text-emerald-500 cursor-help transition-colors" />
@@ -40,9 +42,14 @@ const Slider: React.FC<SliderProps> = ({ label, min = 0, max = 100, step = 1, va
                 <div className="absolute top-0 left-0 h-full bg-emerald-500 rounded-full" style={{ width: `${percentage}%` }} />
 
                 {/* Thumb input */}
-                <input type="range" min={min} max={max} step={step} value={value} onChange={(e) => onChange(Number(e.target.value))} className="absolute w-full h-full opacity-0 cursor-pointer z-10" />
+                <input
+                 type="range" min={min} max={max} step={step} value={value} 
+                 onChange={(e) => onChange(Number(e.target.value))} 
+                 className="absolute w-full h-full opacity-0 cursor-pointer z-10"
+                 />
 
-                <div className="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-white border-2 border-emerald-500 rounded-full shadow-md pointer-events-none transition-transform duration-75 ease-out" style={{ left: `calc(${percentage}% - 8px)` }} />
+                <div 
+                className="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-white border-2 border-emerald-500 rounded-full shadow-md pointer-events-none transition-transform duration-75 ease-out" style={{ left: `calc(${percentage}% - 8px)` }} />
             </div>
         </div>
     );
