@@ -14,9 +14,14 @@ const Onboarding = () => {
                    <div className="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center">
                     <PersonStanding className="w-6 h-6 text-white" />
                    </div>
-                     <h1 className="text-2xl font-bold text-slate-800 dark:text-white">FitTrack</h1>
+                     <h1 
+                      className="text-2xl font-bold text-slate-800 dark:text-white">
+                      FitTrack</h1>
                </div>
-                <p className="text-slate-500 dark:text-slate-400 mt-4">Let's personalize your experience!</p>
+                <p 
+                   className="text-slate-500 dark:text-slate-400 mt-4">
+                  Let's personalize your experience!
+                  </p>
             </div>
        </div>
      </>
