@@ -53,11 +53,11 @@ const Onboarding = () => {
                <div className="felx-1 px-6 onboarding-wrapper">
                     {step === 1 && (
                       <div className="space-y-6">
-                          <div>
-                             <div><User  className="size-6 text-emerald-600 dark:text-emerald-400"/></div>
+                          <div className="flex items-center gap-4 mb-8 ">
+                             <div className="size-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/10 border border-e-mist-100 dark:border-emerald-800 flex items-center justify-center"><User  className="size-6 text-emerald-600 dark:text-emerald-400"/></div>
                              <div>
-                               <h2>How old are you?</h2>
-                               <p>This hepls us calculate your needs</p>
+                               <h2 className="text-lg font-semibold text-slate-80 dark:text-white">How old are you?</h2>
+                               <p className="text-slate-500 dark:text-slate-400 text-sm">This hepls us calculate your needs</p>
                              </div>
                           </div>
                       </div>
