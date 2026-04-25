@@ -45,7 +45,7 @@ const Onboarding = () => {
                     <div key={s} className={`h-1.5 flex-1 rounded-full transition-all duration-300 ${s <= step ? 'bg-emerald-500' : 'bg-slate-200 dark:bg-slate-800'}`} />
                    ))}
                  </div>
-                 <p>
+                 <p className="text-sm text-slate-400 mt-3">
                   Step {step} of {totalSteps}
                  </p>
              </div>
