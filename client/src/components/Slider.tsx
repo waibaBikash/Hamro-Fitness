@@ -39,7 +39,8 @@ const Slider: React.FC<SliderProps> = ({ label, min = 0, max = 100, step = 1, va
             )}
             <div className="relative w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-full cursor-pointer">
                 {/* Track fill */}
-                <div className="absolute top-0 left-0 h-full bg-emerald-500 rounded-full" style={{ width: `${percentage}%` }} />
+                <div className="absolute top-0 left-0 h-full bg-emerald-500 rounded-full" 
+                style={{ width: `${percentage}%` }} />
 
                 {/* Thumb input */}
                 <input
@@ -49,7 +50,8 @@ const Slider: React.FC<SliderProps> = ({ label, min = 0, max = 100, step = 1, va
                  />
 
                 <div 
-                className="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-white border-2 border-emerald-500 rounded-full shadow-md pointer-events-none transition-transform duration-75 ease-out" style={{ left: `calc(${percentage}% - 8px)` }} />
+                className="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-white border-2 border-emerald-500 rounded-full shadow-md pointer-events-none transition-transform duration-75 ease-out"
+                 style={{ left: `calc(${percentage}% - 8px)` }} />
             </div>
         </div>
     );
