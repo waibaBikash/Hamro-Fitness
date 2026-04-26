@@ -52,7 +52,8 @@ const Onboarding = () => {
              <div className="px-6 mb-8 onboarding-wrapper">
                  <div className="flex gap-2 max-w-2xl">
                    {[1, 2, 3].map((s)=>(
-                    <div key={s} className={`h-1.5 flex-1 rounded-full transition-all duration-300 ${s <= step ? 'bg-emerald-500' : 'bg-slate-200 dark:bg-slate-800'}`} />
+                    <div key={s} 
+                    className={`h-1.5 flex-1 rounded-full transition-all duration-300 ${s <= step ? 'bg-emerald-500' : 'bg-slate-200 dark:bg-slate-800'}`} />
                    ))}
                  </div>
                  <p className="text-sm text-slate-400 mt-3">
@@ -64,10 +65,13 @@ const Onboarding = () => {
                     {step === 1 && (
                       <div className="space-y-6">
                           <div className="flex items-center gap-4 mb-8 ">
-                             <div className="size-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/10 border border-e-mist-100 dark:border-emerald-800 flex items-center justify-center"><User  className="size-6 text-emerald-600 dark:text-emerald-400"/></div>
+                             <div className="size-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/10 border border-e-mist-100 dark:border-emerald-800 flex items-center justify-center">
+                             <User  className="size-6 text-emerald-600 dark:text-emerald-400"/></div>
                              <div>
-                               <h2 className="text-lg font-semibold text-slate-80 dark:text-white">How old are you?</h2>
-                               <p className="text-slate-500 dark:text-slate-400 text-sm">This hepls us calculate your needs</p>
+                               <h2 className="text-lg font-semibold text-slate-80 dark:text-white">
+                                How old are you?</h2>
+                               <p className="text-slate-500 dark:text-slate-400 text-sm">
+                                This hepls us calculate your needs</p>
                              </div>
                           </div>
                           <Input label="Age" type="number" 
@@ -80,7 +84,9 @@ const Onboarding = () => {
                     {step === 2 && (
                       <div className="space-y-6 onboarding-wrapper">
                           <div className="flex items-center gap-4 mb-8 ">
-                             <div className="size-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/10 border border-e-mist-100 dark:border-emerald-800 flex items-center justify-center"><ScaleIcon  className="size-6 text-emerald-600 dark:text-emerald-400"/></div>
+                             <div className="size-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/10 border border-e-mist-100 dark:border-emerald-800 flex items-center justify-center">
+                             <ScaleIcon 
+                              className="size-6 text-emerald-600 dark:text-emerald-400"/></div>
                              <div>
                                <h2 
                                className="text-lg font-semibold text-slate-80 dark:text-white">
@@ -107,7 +113,10 @@ const Onboarding = () => {
                     {step === 3 && (
                       <div className="space-y-6 onboarding-wrapper">
                           <div className="flex items-center gap-4 mb-8 ">
-                             <div className="size-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/10 border border-e-mist-100 dark:border-emerald-800 flex items-center justify-center"><Target  className="size-6 text-emerald-600 dark:text-emerald-400"/></div>
+                             <div className="size-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/10 border border-e-mist-100 dark:border-emerald-800 flex items-center justify-center">
+                             <Target  
+                             className="size-6 text-emerald-600 dark:text-emerald-400"/>
+                             </div>
                              <div>
                                <h2 
                                className="text-lg font-semibold text-slate-80 dark:text-white">
@@ -125,14 +134,18 @@ const Onboarding = () => {
                <div className="p-6 pb-10 onboarding-wrapper">
                   <div className="flex gap-3 lg:justify-end">
                      {step > 1 && (
-                       <Button variant="secondary" onClick={()=>setStep(step > 1 ? step - 1 : 1)} className="max-lg:flex-1">
+                       <Button variant="secondary" 
+                       onClick={()=>setStep(step > 1 ? step - 1 : 1)}
+                        className="max-lg:flex-1">
                            <span className="flex justify-center items-center gap-2">
                              <ArrowLeft className="w-5 h-5" />
                               Back
                            </span>
                        </Button>
                      )}
-                     <Button variant="secondary" onClick={handleNext} className="max-lg:flex-1">
+                     <Button variant="secondary"
+                      onClick={handleNext}
+                       className="max-lg:flex-1">
                            <span className="flex justify-center items-center gap-2">
                              {step === totalSteps ? 'Get Started' : 'Continue'}
                              <ArrowRight className="w-5 h-5" />
