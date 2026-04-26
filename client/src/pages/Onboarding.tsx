@@ -1,9 +1,10 @@
-import { PersonStanding, ScaleIcon, User } from "lucide-react"
+import { ArrowLeft, ArrowRight, PersonStanding, ScaleIcon, Target, User } from "lucide-react"
 import { useState } from "react"
 import { Toaster } from "react-hot-toast"
 import { useAppContext } from "../context/AppContext"
 import type { ProfileFormData } from "../types"
 import Input from "../components/Input"
+import Button from "../components/Button"
 
 
 const Onboarding = () => {
@@ -21,6 +22,10 @@ const Onboarding = () => {
   const totalSteps = 3
   const updateField = (field: keyof ProfileFormData, value: string | number) => {
     setFormData({...formData, [field]: value})
+  }
+
+  const handleNext = async ()=> {
+
   }
 
   return (
@@ -99,7 +104,42 @@ const Onboarding = () => {
                          
                       </div>
                     )}
-                    
+                    {step === 3 && (
+                      <div className="space-y-6 onboarding-wrapper">
+                          <div className="flex items-center gap-4 mb-8 ">
+                             <div className="size-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/10 border border-e-mist-100 dark:border-emerald-800 flex items-center justify-center"><Target  className="size-6 text-emerald-600 dark:text-emerald-400"/></div>
+                             <div>
+                               <h2 
+                               className="text-lg font-semibold text-slate-80 dark:text-white">
+                                Whats your goal?</h2>
+                               <p
+                                className="text-slate-500 dark:text-slate-400 text-sm">
+                                  Set a clear goal for your fitness journey</p>
+                             </div>
+                          </div>
+                         
+                      </div>
+                    )}          
+               </div>
+               {/* Navigation buttons */}
+               <div className="p-6 pb-10 onboarding-wrapper">
+                  <div className="flex gap-3 lg:justify-end">
+                     {step > 1 && (
+                       <Button variant="secondary" onClick={()=>setStep(step > 1 ? step - 1 : 1)} className="max-lg:flex-1">
+                           <span className="flex justify-center items-center gap-2">
+                             <ArrowLeft className="w-5 h-5" />
+                              Back
+                           </span>
+                       </Button>
+                     )}
+                     <Button variant="secondary" onClick={handleNext} className="max-lg:flex-1">
+                           <span className="flex justify-center items-center gap-2">
+                             {step === totalSteps ? 'Get Started' : 'Continue'}
+                             <ArrowRight className="w-5 h-5" />
+                           </span>
+                       </Button>
+
+                  </div>
                </div>
        </div>
      </>
