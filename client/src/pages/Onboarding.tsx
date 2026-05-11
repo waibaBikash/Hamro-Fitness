@@ -112,8 +112,10 @@ const Onboarding = () => {
                     )}
                     {step === 3 && (
                       <div className="space-y-6 onboarding-wrapper">
-                          <div className="flex items-center gap-4 mb-8 ">
-                             <div className="size-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/10 border border-e-mist-100 dark:border-emerald-800 flex items-center justify-center">
+                          <div 
+                           className="flex items-center gap-4 mb-8 ">
+                             <div 
+                             className="size-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/10 border border-e-mist-100 dark:border-emerald-800 flex items-center justify-center">
                              <Target  
                              className="size-6 text-emerald-600 dark:text-emerald-400"/>
                              </div>
@@ -123,7 +125,8 @@ const Onboarding = () => {
                                 Whats your goal?</h2>
                                <p
                                 className="text-slate-500 dark:text-slate-400 text-sm">
-                                  Set a clear goal for your fitness journey</p>
+                                  Set a clear goal for your fitness journey
+                                  </p>
                              </div>
                           </div>
                          
