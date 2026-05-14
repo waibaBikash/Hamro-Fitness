@@ -40,11 +40,14 @@ useEffect(()=>{
 
       <Toaster />
         <main className="login-page-container">
-             <form onSubmit={handleSubmit}  className="login-form">
+             <form onSubmit={handleSubmit} 
+              className="login-form">
                <h2 className="text-3xl font-medium text-gray-900 dark:text-white">
                  {state === 'login' ? 'Sign In' : 'Sign Up'}
                </h2>
-               <p className="text-sm text-gray-500/90 dark:text-gray-400">{state === 'login' ? 'Welcome back! Please enter your details.' : 'Create an account to get started.'}</p>
+               <p 
+               className="text-sm text-gray-500/90 dark:text-gray-400">{state === 'login' ? 'Welcome back! Please enter your details.' : 'Create an account to get started.'}
+               </p>
 
                {state !== 'login' && (
                  <div className="mt-4">
@@ -99,9 +102,12 @@ useEffect(()=>{
                  </button>
 
                  {state === 'login' ? (
-                  <p className="text-center py-6 text-sm text-gray-500 dark:text-gray-400">Don't have an account?
+                  <p 
+                   className="text-center py-6 text-sm text-gray-500 dark:text-gray-400">
+                    Don't have an account?
                      <button  onClick={()=> setState('sign-up')}
-                     className="ml-1 cursor-pointer text-green-600 hover:underline">Sign up</button>
+                     className="ml-1 cursor-pointer text-green-600 hover:underline">Sign up
+                     </button>
                   </p>
                   )
                    : ( <p className="text-center py-6 text-sm text-gray-500 dark:text-gray-400">Already have an account?
