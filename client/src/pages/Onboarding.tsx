@@ -36,7 +36,8 @@ const Onboarding = () => {
           {/* Header */}
             <div className="p-6 pt-12 onboarding-wrapper">
                <div className="flex items-center gap-3 mb-2">
-                   <div className="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center">
+                   <div 
+                    className="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center">
                     <PersonStanding className="w-6 h-6 text-white" />
                    </div>
                      <h1 
@@ -162,4 +163,4 @@ const Onboarding = () => {
   )
 }
 
-export default Onboarding
+export default Onboarding;
