@@ -89,7 +89,8 @@ useEffect(()=>{
                          />
                          <input
                          onChange={(e) => setPassword(e.target.value)} value={password}
-                          placeholder="enter a password" className="login-input pr-10" required
+                          placeholder="enter a password" className="login-input pr-10"
+                          required
                           type= {showPassword ? "text" : "password"}/>
                           <button type="button" className="absolute right-3 top-1/2 -translate-1/2 text-gray-400 hover:text-gray-600" onClick={()=>setShowPassword((p)=> !p)}>
                             {showPassword ? <EyeOffIcon size={16} /> : <EyeIcon size={16} />}
@@ -97,7 +98,9 @@ useEffect(()=>{
                       </div>
                  </div>
 
-                 <button type="submit" disabled={isSubmitting} className="login-button">
+                 <button type="submit"
+                  disabled={isSubmitting}
+                  className="login-button">
                     {isSubmitting ? 'Signing in...' : state === 'login' ? 'Sign In' : 'Sign Up'}
                  </button>
 
@@ -110,9 +113,12 @@ useEffect(()=>{
                      </button>
                   </p>
                   )
-                   : ( <p className="text-center py-6 text-sm text-gray-500 dark:text-gray-400">Already have an account?
+                   : ( <p className="text-center py-6 text-sm text-gray-500 dark:text-gray-400">
+                    Already have an account?
                      <button  onClick={()=> setState('login')}
-                     className="ml-1 cursor-pointer text-green-600 hover:underline">Login</button>
+                     className="ml-1 cursor-pointer text-green-600 hover:underline">
+                      Login
+                      </button>
                      </p>
                  )}
              </form>
@@ -121,4 +127,4 @@ useEffect(()=>{
   )
 }
 
-export default Login
+export default Login;
